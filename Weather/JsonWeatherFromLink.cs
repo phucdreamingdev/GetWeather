@@ -2,7 +2,11 @@ namespace Weather;
 
 public class JsonWeatherFromLink
 {
-    public int? Cnt { get; set; }
+    public JsonWeatherFromLink()
+    {
+        List = new HashSet<ListItem>();
+    }
 
-    public IEnumerable<WeatherInJson>? List { get; set; }
+    public int? Cnt { get; set; }
+    public IEnumerable<ListItem> List { get; set; }
 }

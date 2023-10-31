@@ -2,7 +2,7 @@ namespace Weather;
 
 public class WeatherForecast
 {
-    public int CityId { get; set; }
+    public int? CityId { get; set; }
     
     public string? CityName { get; set; }
     
@@ -10,20 +10,10 @@ public class WeatherForecast
 
     public string? WeatherDescription { get; set; }
 
-    public string? WeatherIcon
-    {
-        get
-        {
-            return $"http://openweathermap.org/img/wn/{this.WeatherIcon}@2x.png";
-        }
-        set
-        {
-            WeatherIcon = this.WeatherIcon;
-        }
-    }
+    public string? WeatherIcon { get; set; }
     
-    public float MainTemp { get; set; }
+    public float? MainTemp { get; set; }
 
-    public int MainHumidity { get; set; }
+    public int? MainHumidity { get; set; }
 
 }
